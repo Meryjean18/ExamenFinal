@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,6 +49,16 @@
   <ItemGroup>
     <Compile Include="ExamenBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Examen.Core\Examen.Core.csproj">
+      <Project>{21a86f5a-7b25-4522-8d87-8f6e0e7bea60}</Project>
+      <Name>Examen.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Examen.Data\Examen.Data.csproj">
+      <Project>{6186d029-50de-44fd-b859-9c4926311a6f}</Project>
+      <Name>Examen.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
